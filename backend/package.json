@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "description": "This is the backend",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "ts-node server.ts",
+    "test": "test"
+  },
+  "author": "anaslharrak",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
