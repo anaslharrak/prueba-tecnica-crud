@@ -18,7 +18,7 @@ const HomePage = () => {
     })
 
     const handleAddButton = () => {
-        navigate('api/user/create');
+        navigate('/api/user/create');
       }
     
     return (
