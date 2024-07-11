@@ -11,10 +11,12 @@ const userSchema = new mongoose.Schema({
         postalCode: { type: String, required: false },
         country: { type: String, required: true }
     },
-    profileImage: { type: mongoose.Schema.Types.ObjectId, ref: 'Image' },
+    profileImage: { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: false},
     creationDate: { type: Date, required: true },
 });
 
 const User = mongoose.model('User', userSchema);
 
 export default User;
+
+
