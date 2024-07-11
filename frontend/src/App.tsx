@@ -1,6 +1,6 @@
 import './App.css'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { HomePage, Error404, UserPage } from './components/exports'
+import { HomePage, Error404, UserPage } from './pages/exports'
 
 function App() {
 

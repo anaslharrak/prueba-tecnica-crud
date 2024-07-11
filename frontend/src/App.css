@@ -1,8 +1,18 @@
-#root, body, html {
+* {
+  margin: 0;
+  padding: 1vmax;
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100%;
   width: 100%;
-  place-content: center;
-  display: grid;
+}
+
+body {
+  display: grid; 
+  min-height: 100%;
+  min-width: 100%;
 }
 
 
