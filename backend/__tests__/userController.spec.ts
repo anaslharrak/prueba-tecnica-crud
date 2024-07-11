@@ -55,9 +55,12 @@ const api = supertest(app);
       creationDate: new Date().toISOString(),
       __v: 0,
     };
-    const response = await api.post("/api/user").send(newUser);
+    let response = await api.post("/api/user").send(newUser);
     expect(response.status).toBe(201);
     expect(response.body.user).toMatchObject(newUser);
+    const _id = response.body.user._id;
+    response = await api.get(`/api/user/${_id}`);
+    expect(response.status).toBe(200);
   });
 
   test("update a user from PUT /api/user/:id", async () => {
