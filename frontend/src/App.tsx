@@ -12,6 +12,7 @@ function App() {
       <Route path="/" element={<Navigate to="/api/users" />} />
       <Route path="/api/users" element={<HomePage />} />
       <Route path="/api/user/create" element={<UserCreate />} />
+      <Route path="/api/user/:id/edit" element={<UserCreate />} />
       <Route path="/api/user/:id" element={<UserPage />} />
       <Route path="*" element={<Error404 />}/>
     </Routes>

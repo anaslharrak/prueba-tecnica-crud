@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 1vmax;
@@ -7,18 +9,16 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
 }
 
 body {
-  display: grid; 
+  display: grid;
   min-height: 100%;
   min-width: 100%;
 }
 
-
 svg {
   overflow: visible !important;
 }
-
-
-
