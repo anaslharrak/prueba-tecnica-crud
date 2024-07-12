@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "66915100f669c0a6e97a91e5"
+  },
+  "name": "John",
+  "surname": "Doe",
+  "email": "john.doe@example.com",
+  "phone": "+66666666666",
+  "birthDate": {
+    "$date": "2008-12-31T23:00:00.000Z"
+  },
+  "genre": "Male",
+  "address": {
+    "street": "C/ Inventada 222",
+    "city": "Mataro",
+    "country": "Barcelona"
+  },
+  "creationDate": {
+    "$date": "2023-04-02T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66915131f669c0a6e97a91e7"
+  },
+  "name": "Jane",
+  "surname": "Doe",
+  "email": "jane.doe@example.com",
+  "phone": "+66666666666",
+  "birthDate": {
+    "$date": "2008-12-01T23:00:00.000Z"
+  },
+  "genre": "Female",
+  "address": {
+    "street": "C/ Inventada 222",
+    "city": "Mataro",
+    "country": "Barcelona"
+  },
+  "creationDate": {
+    "$date": "2023-04-02T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6691514ff669c0a6e97a91e9"
+  },
+  "name": "Mr.",
+  "surname": "Robot",
+  "email": "mr.robot@example.com",
+  "phone": "+66666666666",
+  "birthDate": {
+    "$date": "1999-01-31T23:00:00.000Z"
+  },
+  "genre": "Other",
+  "address": {
+    "street": "C/ Inventada 222",
+    "city": "Mataro",
+    "country": "Barcelona"
+  },
+  "creationDate": {
+    "$date": "2023-04-02T00:00:00.000Z"
+  },
+  "__v": 0
+}]

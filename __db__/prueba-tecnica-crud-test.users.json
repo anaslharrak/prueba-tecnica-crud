@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "668e8976c97a7b9ff703d477"
+  },
+  "name": "Jane",
+  "surname": "Doe",
+  "email": "jane.doe@example.com",
+  "birthDate": {
+    "$date": "1999-01-01T00:00:00.000Z"
+  },
+  "genre": "Female",
+  "address": {
+    "city": "Anytown",
+    "country": "Anyland"
+  },
+  "creationDate": {
+    "$date": "2024-07-12T15:50:26.685Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "668e8976c97a7b9ff703d478"
+  },
+  "name": "Alice",
+  "surname": "Smith",
+  "email": "alice.smith@example.com",
+  "birthDate": {
+    "$date": "1980-01-01T00:00:00.000Z"
+  },
+  "genre": "Other",
+  "address": {
+    "city": "Anytown",
+    "country": "Anyland"
+  },
+  "creationDate": {
+    "$date": "2024-07-12T15:50:26.685Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669150c2a2d252c7b73378fe"
+  },
+  "name": "New",
+  "surname": "User",
+  "email": "new.user@example.com",
+  "birthDate": {
+    "$date": "1999-01-01T00:00:00.000Z"
+  },
+  "genre": "Other",
+  "address": {
+    "city": "Anytown",
+    "country": "Anyland"
+  },
+  "creationDate": {
+    "$date": "2024-07-12T15:50:26.801Z"
+  },
+  "__v": 0
+}]
