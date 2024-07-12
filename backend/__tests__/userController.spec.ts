@@ -46,12 +46,14 @@ const api = supertest(app);
   test("create a user from POST /api/user", async () => {
     const newUser = {
       name: "New",
-      surename: "User",
+      surname: "User",
       email: "new.user@example.com",
       address: {
         city: "Anytown",
         country: "Anyland",
       },
+      genre: 'Other',
+      birthDate: new Date('1999-01-01').toISOString(),
       creationDate: new Date().toISOString(),
       __v: 0,
     };
@@ -68,7 +70,7 @@ const api = supertest(app);
     const updatedUser = {
       ...user,
       name: "Updated",
-      surename: "User",
+      surname: "User",
       email: "updated.user@example.com",
     };
 
