@@ -13,7 +13,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }: { user: User }) => {
     const navigate = useNavigate();
 
     const handleClickDeleteButton = () => {
-      toast.warning(`User ${user.name} ${user.surename} will be deleted, are you sure?`, 
+      toast.warning(`User ${user.name} ${user.surname} will be deleted, are you sure?`, 
         {
           action: {
             label: 'Delete',
@@ -43,7 +43,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }: { user: User }) => {
     };
 
     const handleClickEditButton = () => {
-      console.log(`User ${user.name} ${user.surename} edited`);
+      console.log(`User ${user.name} ${user.surname} edited`);
     } 
 
     const handleSeeMoreDetails = () => {
@@ -67,7 +67,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }: { user: User }) => {
 
           </IconContainer>
           
-          <h1>{user.name} {user.surename}</h1>
+          <h1>{user.name} {user.surname}</h1>
           <p>Email: {user.email ? user.email : 'No email provided'}</p>
           <p>Address: {`${user.address.street ? user.address.street : "Address not found"}, ${user.address.city}, ${user.address.country}`}</p>
           <p>Creation Date: { formattedDate }</p>
