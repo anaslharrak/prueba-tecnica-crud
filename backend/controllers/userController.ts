@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import User from '../schemas/userSchema';
+import { Error } from 'mongoose';
 class userController {
 
     // GET /api/users
@@ -27,12 +28,13 @@ class userController {
     
     // POST /api/user
     async create(req: Request, res: Response) {
-       User.create(req.body)
-            .then((user) => {
-                res.status(201).json({message: 'User created', user});
-            })
-            .catch((error) => {
-                res.status(500).json({error: error.message})});
+        try {
+            const user = await User.create(req.body);
+            res.status(201).json({ message: 'User created', user });
+        } catch (error) {
+            const typedError = error as Error;
+            res.status(500).json({ error: typedError.message });
+        }
     }
     
     // PUT /api/user

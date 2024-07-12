@@ -10,8 +10,11 @@ interface Address {
 export interface User {
     _id: mongoose.Types.ObjectId;
     name: string;
-    surename: string;
+    surname: string;
     email?: string;
+    phone?: string;
+    birthDate: Date;
+    genre: string;
     address: Address;
     profileImage?: mongoose.Types.ObjectId;
     creationDate: Date;
