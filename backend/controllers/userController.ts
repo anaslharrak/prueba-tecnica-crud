@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import User from '../schemas/userSchema';
-import { Error } from 'mongoose';
+import mongoose from 'mongoose';
 class userController {
 
     // GET /api/users
@@ -29,17 +29,21 @@ class userController {
     // POST /api/user
     async create(req: Request, res: Response) {
         try {
-            const user = await User.create(req.body);
-            res.status(201).json({ message: 'User created', user });
-        } catch (error) {
-            const typedError = error as Error;
-            res.status(500).json({ error: typedError.message });
-        }
+            const user = new User(req.body);
+            await user.save();
+            res.status(201).send(user);
+          } catch (error) {
+            if (error instanceof mongoose.Error.ValidationError) {
+              return res.status(400).send({ message: 'Validation Error', errors: error.errors });
+            }
+            console.error(error);
+            res.status(500).send({ message: 'Internal Server Error' });
+          }
     }
     
     // PUT /api/user
     async update(req: Request, res: Response) {
-       User.findByIdAndUpdate(req.params.id, req.body, {new: true})
+       User.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true, context: 'query'})
             .then((user) => {
                 res.status(200).json({message: 'User updated', user});
             })

@@ -4,8 +4,8 @@ const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; // Basic regex for email v
 const phoneRegex = /^\+?[1-9]\d{1,14}$/; // Basic regex for validating international phone numbers.
 
 const userSchema = new mongoose.Schema({
-  name: { type: String, required: true, trim: true, maxlength: 50 },
-  surname: { type: String, required: true, trim: true, maxlength: 50 },
+  name: { type: String, required: true, trim: true, maxlength: 50, minlength: 1},
+  surname: { type: String, required: true, trim: true, maxlength: 50, minlength: 1 },
   email: { 
     type: String, 
     required: false, 
@@ -36,7 +36,6 @@ const userSchema = new mongoose.Schema({
     postalCode: { type: String, required: false, trim: true },
     country: { type: String, required: true, trim: true }
   },
-  profileImage: { type: mongoose.Schema.Types.ObjectId, ref: 'Image', required: false },
   creationDate: { 
     type: Date, 
     required: true,
