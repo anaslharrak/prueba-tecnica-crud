@@ -16,6 +16,5 @@ export interface User {
     birthDate: Date;
     genre: string;
     address: Address;
-    profileImage?: mongoose.Types.ObjectId;
     creationDate: Date;
   }
