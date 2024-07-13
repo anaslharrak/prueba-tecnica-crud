@@ -14,17 +14,23 @@ export const Container = styled.div`
 
 export const Icon = styled.svg`
   position: absolute;
-  top: 2vh; 
+  top: 0vh; 
   right: 2vw; 
   cursor: pointer;
   width: 4vmax;  
   height: 4vmax; 
+  min-width: 4vmax;
+  min-height: 4vmax;
   fill: #007bff;
   transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
   }
+`;
+
+export const ReloadIcon = styled(Icon)`
+  right: 6vw;
 `;
 
 

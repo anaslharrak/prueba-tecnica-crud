@@ -45,8 +45,8 @@ const UserPage = () => {
           <Card>
             <Title>{`${data.user.name} ${data.user.surname}`}</Title>
             <IconContainer>
-              <Icon onClick={() => {
-                HandleDelete(data.user);
+              <Icon onClick={async () => {
+                await HandleDelete(data.user);
                 goHomePage();
               }} 
               xmlns="http://www.w3.org/2000/svg" 

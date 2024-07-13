@@ -5,9 +5,10 @@ import { useHandleSeeMoreDetails } from "../../hooks/useSeeMoreDetailsUser";
 import { useHandleEdit } from "../../hooks/useEditUser";
 interface UserCardProps {
     user: User;
+    handleFetch: () => void;
   }
   
-const UserCard: React.FC<UserCardProps> = ({ user }: { user: User }) => {
+const UserCard: React.FC<UserCardProps> = ({ user, handleFetch }) => {
     const formattedDate = new Date(user.creationDate).toLocaleDateString();
 
     const HandleSeeMoreDetails = useHandleSeeMoreDetails();
@@ -18,7 +19,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }: { user: User }) => {
         <Card onClick={() => HandleSeeMoreDetails(user._id)}>
           <IconContainer>
             <IconDelete 
-              onClick={(event) => { event.stopPropagation(); HandleDelete(user); }} 
+              onClick={async (event) => { event.stopPropagation(); await HandleDelete(user); handleFetch(); }} 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 20 20" 
               fill="currentColor"
