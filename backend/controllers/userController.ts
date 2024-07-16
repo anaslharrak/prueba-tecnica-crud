@@ -34,7 +34,7 @@ class userController {
             res.status(201).send(user);
           } catch (error) {
             if (error instanceof mongoose.Error.ValidationError) {
-              return res.status(400).send({ message: 'Validation Error', errors: error.errors });
+              return res.status(400).json({ error: error.message });
             }
             console.error(error);
             res.status(500).send({ message: 'Internal Server Error' });
